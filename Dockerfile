@@ -3,24 +3,15 @@
 # all personal R scripts will be based on this image
 # dockerfile contains instructions to install all needed packages listed in a separate file
 
-FROM rocker/r-base:latest
+FROM rocker/r-ver:4.5.2
 
-MAINTAINER 'Vladimir Zhbanko' vladimir.zhbanko@gmail.com
+MAINTAINER 'Augusto Salonio' augusto93921@gmail.com
 
 ## install debian packages
 RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     build-essential \
-    software-properties-common \
-    dirmngr \
-    gnupg \
-    lsb-release \
     libxml2-dev \
     libcairo2-dev \
-    libsqlite3-dev \
-    libmariadb-dev \
-    libpq-dev \
-    libssh2-1-dev \
-    unixodbc-dev \
     libcurl4-openssl-dev \
     libssl-dev \
     gfortran \
@@ -31,9 +22,8 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     libpng-dev \
     libtiff5-dev \
     libjpeg-dev \
-    cmake \
-    default-jdk \
-    default-jre \
+    openjdk-11-jdk \
+    openjdk-11-jre \
  && rm -rf /var/lib/apt/lists/*
 
 ## Get Java (for h2o R package)
