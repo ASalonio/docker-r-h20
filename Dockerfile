@@ -8,11 +8,16 @@ FROM rocker/r-base:latest
 MAINTAINER 'Vladimir Zhbanko' vladimir.zhbanko@gmail.com
 
 ## install debian packages
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+    build-essential \
+    software-properties-common \
+    dirmngr \
+    gnupg \
+    lsb-release \
     libxml2-dev \
     libcairo2-dev \
     libsqlite3-dev \
-    libmariadbd-dev \
+    libmariadb-dev \
     libpq-dev \
     libssh2-1-dev \
     unixodbc-dev \
@@ -28,7 +33,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libjpeg-dev \
     cmake \
     default-jdk \
-    default-jre
+    default-jre \
+ && rm -rf /var/lib/apt/lists/*
 
 ## Get Java (for h2o R package)
 RUN apt-get update -qq \
