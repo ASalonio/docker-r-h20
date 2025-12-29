@@ -18,6 +18,17 @@ libssh2-1-dev \
 unixodbc-dev \
 libcurl4-openssl-dev \
 libssl-dev
+gfortran \
+libbz2-dev \
+liblzma-dev \
+libpcre3-dev \
+zlib1g-dev \
+libpng-dev \
+libtiff5-dev \
+libjpeg-dev \
+cmake \
+default-jdk \
+default-jre
 
 ## Get Java (for h2o R package)
 RUN apt-get update -qq \
