@@ -9,26 +9,26 @@ MAINTAINER 'Vladimir Zhbanko' vladimir.zhbanko@gmail.com
 
 ## install debian packages
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-libxml2-dev \
-libcairo2-dev \
-libsqlite3-dev \
-libmariadbd-dev \
-libpq-dev \
-libssh2-1-dev \
-unixodbc-dev \
-libcurl4-openssl-dev \
-libssl-dev \
-gfortran \
-libbz2-dev \
-liblzma-dev \
-libpcre3-dev \
-zlib1g-dev \
-libpng-dev \
-libtiff5-dev \
-libjpeg-dev \
-cmake \
-default-jdk \
-default-jre
+    libxml2-dev \
+    libcairo2-dev \
+    libsqlite3-dev \
+    libmariadbd-dev \
+    libpq-dev \
+    libssh2-1-dev \
+    unixodbc-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    gfortran \
+    libbz2-dev \
+    liblzma-dev \
+    libpcre3-dev \
+    zlib1g-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libjpeg-dev \
+    cmake \
+    default-jdk \
+    default-jre
 
 ## Get Java (for h2o R package)
 RUN apt-get update -qq \
