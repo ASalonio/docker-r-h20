@@ -17,7 +17,7 @@ libpq-dev \
 libssh2-1-dev \
 unixodbc-dev \
 libcurl4-openssl-dev \
-libssl-dev
+libssl-dev \
 gfortran \
 libbz2-dev \
 liblzma-dev \
